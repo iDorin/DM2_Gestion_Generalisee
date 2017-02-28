@@ -12,3 +12,19 @@ Démontrez que votre design est de bonne qualité en utilisant les techniques vu
 
 ### Bonus
 Implémentez le design en Java. L'implémentation doit être générée à partir du design dans Visual Paradigm. Une interface graphique n'est pas requise. La méthode main créera les objets exemples nécessaires.
+
+## Bareme
+Design logiciel [55%] :
+* Diagramme de classe [20%]
+* Diagrammes de séquence ou de collaboration [15%]
+* Diagramme de paquets [8%]
+* Contraintes OCL [7%]
+* Identifications des modules réutilisables [5%]
+
+Qualité du design [45%]
+* Discussion du couplage et de la cohésion des modules [10%]
+* Discussion du fardeau des classes [10%]
+* Graphe IA et justification [10%]
+* Justification de l'application des principes de conception [15%]
+
+Bonus (pas de note partielle) [10%]
