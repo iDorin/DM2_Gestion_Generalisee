@@ -1,6 +1,8 @@
 # DM2_Gestion_Generalisee
 Étendre et généraliser le design du DM1 pour qu'il permette aussi de réserver des cabines sur des paquebots de croisières et des sièges dans des trains.
 
+Enoncé : http://www-ens.iro.umontreal.ca/~syriani/courses/IFT3911-2017H/A2/A2.html
+
 ## Tâches
 Produisez le design logiciel du système de réservation généralisé. Vous n'êtes pas tenus de commencer à partir de votre design précédent. 
 
