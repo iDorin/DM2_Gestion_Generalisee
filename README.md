@@ -21,7 +21,7 @@ Design logiciel [55%] :
 * Contraintes OCL [7%]
 * Identifications des modules réutilisables [5%]
 
-Qualité du design [45%]
+Qualité du design [45%] :
 * Discussion du couplage et de la cohésion des modules [10%]
 * Discussion du fardeau des classes [10%]
 * Graphe IA et justification [10%]
