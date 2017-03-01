@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>rapport</title></head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>rapport</title>
+
+</head>
 <body>
 <span style="font-weight: bold;">IFT 3911. Analyse et
 conception des logiciels</span><br>
@@ -101,11 +103,272 @@ inclussivement les projets en format .vpp.<br>
 <h3><br>
 </h3>
 <h3>Tâche 2. Diagramme de séquence ou de collaboration</h3>
-<img style="width: 983px; height: 437px;" alt="Verification trajet disponnible" src="Design/diagramme_sequence_verification.png"><br><br><br><br><img style="width: 771px; height: 366px;" alt="Reservation place" src="Design/diagramme_sequence_reservation.png"><br><br><br><br><img style="width: 1041px; height: 439px;" alt="Paiement place" src="Design/diagramme_sequence_paiement.png"><br><br><br><br><img style="width: 1195px; height: 818px;" alt="Changement ou annulation place" src="Design/diagramme_sequence_annuler-changer.png"><br><br>
+<img style="width: 983px; height: 437px;" alt="Verification trajet disponnible" src="Design/diagramme_sequence_verification.png"><br>
+<br>
+<br>
+<br>
+<img style="width: 771px; height: 366px;" alt="Reservation place" src="Design/diagramme_sequence_reservation.png"><br>
+<br>
+<br>
+<br>
+<img style="width: 1041px; height: 439px;" alt="Paiement place" src="Design/diagramme_sequence_paiement.png"><br>
+<br>
+<br>
+<br>
+<img style="width: 1195px; height: 818px;" alt="Changement ou annulation place" src="Design/diagramme_sequence_annuler-changer.png"><br>
+<br>
 <h3>Tâche 3. Diagramme de paquets</h3>
 <img style="width: 1303px; height: 1066px;" alt="Diagramme de paquets" src="Design/diagramme_paquets.png">
 <h3>Tâche 4. Identification des modules réutilisables</h3>
-<h3>Tâche 5. Discussion de couplage et de la cohésion des modules</h3>
+<table style="text-align: left; width: 510px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="font-weight: bold; width: 238px;">Module</td>
+
+<td style="font-weight: bold; width: 254px;">Réutilisation</td>
+</tr>
+<tr>
+<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
+Administration</td>
+
+<td style="width: 254px;"></td>
+</tr>
+<tr>
+<td style="width: 238px;">Administrateur</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">SystemeAdmin</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
+Voyage</td>
+
+<td style="width: 254px;"></td>
+</tr>
+<tr>
+<td style="width: 238px;">LogInfoTrajet</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Compagnie</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieAerienne</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieCroisiere</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieTrain</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">DetailTrajet</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">Trajet</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">Vol</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Croisiere</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">LigneTrain</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Station</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">Aeroport</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Port</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Gare</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Sujet</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">PlaceParTrajet</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+&nbsp;Client</span></td>
+
+<td style="width: 254px;"></td>
+</tr>
+<tr>
+<td style="width: 238px;">SystemeClient</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Client</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Reservation</span></td>
+
+<td style="width: 254px;"></td>
+</tr>
+<tr>
+<td style="width: 238px;">Reservation</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">Observer</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Transport</span></td>
+
+<td style="width: 254px;"></td>
+</tr>
+<tr>
+<td style="width: 238px;">Place</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">Siege</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Cabine</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Transport</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">Avion</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Train</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Paquebot</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Section</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionSieges</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionA, ..., SectionP</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionCabines</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionI, ..., &nbsp;SectionFD</td>
+
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Disposition</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">Etroite, ..., Confort</td>
+
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet Paiement</span></td>
+
+<td style="width: 254px;"></td>
+</tr>
+<tr>
+<td style="width: 238px;">Paiement</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">CarteCredit</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+<tr>
+<td style="width: 238px;">Annulation</td>
+
+<td style="width: 254px;">Elevée</td>
+</tr>
+
+
+
+
+
+
+
+
+
+</tbody>
+</table>
+<h3><br></h3><h3>Tâche 5. Discussion de couplage et de la cohésion des modules</h3>
 <h3>Tâche 6. Discussion du fardeau des classes</h3>
 <h3>Tâche 7. Graphe IA et justification</h3>
 <h3>Tâche 8. Justification de l'application des principes de
