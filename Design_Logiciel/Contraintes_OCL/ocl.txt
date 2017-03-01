@@ -1,0 +1,11 @@
+1. Le port de départ et d'arrivée doit être le même:
+
+context Trajet
+   inv: self.départ.port = self.arrivée.port
+
+
+2. Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas:
+
+context Paquebot
+   inv: self.transport.trajet.croisiere.allInstances() -> forAll(t1, t2: Croisiere.villesStationnement
+        | t1 <> t2)
