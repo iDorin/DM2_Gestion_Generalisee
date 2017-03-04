@@ -1,11 +1,11 @@
-1. Le port de départ et d'arrivée doit être le même:
+1. Le port de dÃ©part et d'arrivÃ©e doit Ãªtre le mÃ©me:
 
-context Trajet
-   inv: self.départ.port = self.arrivée.port
+context Croisiere
+   inv: self.detail.depart.uiniqueId = self.detail.arrivee.uniqueId
 
 
-2. Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas:
+2. Un paquebot peut Ãªtre assignÃ© Ã  plusieurs itinÃ©raires tant qu'ils ne se chevauchent pas:
 
-context Paquebot
-   inv: self.transport.trajet.croisiere.allInstances() -> forAll(t1, t2: Croisiere.villesStationnement
-        | t1 <> t2)
+context Croisiere
+   inv: Croisiere.allInstances() -> forAll(t1, t2: Croisiere 
+           | t1 <> t2 AND t1.transport.id = t2.transport.id implies t1.dateDepart > t2.dateArrivee)
