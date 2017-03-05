@@ -363,19 +363,381 @@
     <h4>Couplage</h4>
     Lors de la conception du système nous avons essayé de suivre le
     principe d'une faible couplage et une forte cohésion.<br>
-    Effectivement, un seul type de couplage de modules est un couplage
-    par données.<br>
-    De plus, pour diminuer le nombre des références entre les paquets,
-    nous avons introduit des interfaces <b>"Reservable"</b> et <b>"PayableService".</b><br>
+    Effectivement, un seul type de couplage de modules du système est le
+    couplage par données.<br>
+    De plus, afin de diminuer le nombre des références entre les
+    paquets, nous avons introduit des interfaces <b>"Reservable"</b> et
+    <b>"PayableService"</b>.<br>
     Cette mésure nous a permis d'augmenter la réutilisabilité de paquets
-    <b>"Paiement"</b> et <b>"Reservation".<br>
+    <b>"Paiement"</b> et <b>"Reservation"</b>.<b><br>
       <br>
     </b>
     <h4><b> Cohésion</b></h4>
-    <b><br>
-    </b>
-    <h3>Tâche 7. Discussion du fardeau des classes</h3>
     <br>
+    <table style="text-align: left;" width="926" height="1467"
+      cellspacing="2" cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="font-weight: bold; width: 238px;">Module</td>
+          <td style="font-weight: bold; width: 254px;">Cohésion</td>
+          <td valign="top"><b>Explication</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-style: italic; font-weight: bold; width:
+            238px;">Paquet Administration</td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Administrateur</td>
+          <td style="width: 254px;">domaine mixte<br>
+          </td>
+          <td valign="top">La classe Administrateur se réfère à la
+            classe d'une autre domaine: LogInfoVoyage qui lui est
+            extrinséque<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SystemeAdmin</td>
+          <td style="width: 254px;">domaine mixte<br>
+          </td>
+          <td valign="top">La classe se réfère à plusieurs classes
+            extrinséques des autres domaines <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-style: italic; font-weight: bold; width:
+            238px;">Paquet Voyage</td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">LogInfoTrajet</td>
+          <td style="width: 254px;">cohésion forte<br>
+          </td>
+          <td valign="top">Toutes les classes référentes sont
+            intrinsèques et font partie du même domain.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Compagnie</td>
+          <td style="width: 254px;">cohésion forte<br>
+          </td>
+          <td valign="top">Les classes intriséques Trajet et
+            DetailTrajet appartienent au même domaine. Les différent
+            types de compagnie sont séparés dans différentes classes:
+            CompagnieAérienne etc. <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieAerienne</td>
+          <td style="width: 254px;">cohésion forte<br>
+          </td>
+          <td valign="top">Est une sous-classe de Compagnie<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieCroisiere</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Est une sous-classe de Compagnie</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieTrain</td>
+          <td style="width: 254px;">cohésion forte</td>
+          <td valign="top">Est une sous-classe de Compagnie</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">DetailTrajet</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Toutes les classes dont la classe
+            DetailTrajet fait référence sont lui intrinsèques et sont
+            dans le même domaine<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Trajet</td>
+          <td style="width: 254px;">cohésion forte</td>
+          <td valign="top">Toutes les classes dont la classe Trajet fait
+            référence sont lui intrinsèques. </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Vol</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Sous-classe de trajet </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Croisiere</td>
+          <td style="width: 254px;">cohésion forte</td>
+          <td valign="top">Sous-classe de trajet </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">LigneTrain</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Sous-classe de trajet </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Station</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Pas de cohésion de domaine mixte ni cohésion
+            de rôle mixte, car se réfère aux classes intrinséques
+            seulement.<br>
+            Pas de cohésion d'instance mixte, car on utilise les
+            sous-classes pour représenter different types de station.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Aeroport</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Sous-classe de Station<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Port</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Sous-classe de Station<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Gare</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Sous-classe de Station<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Sujet</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Sous-classe de Station<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">PlaceParTrajet</td>
+          <td style="width: 254px;">cohésion forte<br>
+          </td>
+          <td valign="top">Se réfère aux classes de domains différents,
+            par conter elles sont toutes lui intrinséques. Alor, pas de
+            cohésion de domaine mixte ni de cohésion de rôle mixte.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet &nbsp;Client</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SystemeClient</td>
+          <td style="width: 254px;">domaine mixte<br>
+          </td>
+          <td valign="top">Se réfere à plusieurs classes extrinséques du
+            même domaine. Pas de cohésion d'instance mixte, car la
+            classe est un singleton.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Client</td>
+          <td style="width: 254px;">cohésion forte<br>
+          </td>
+          <td valign="top">Toutes les classes référées sont lui
+            intrinséques. (On considère la classe Reservation étant
+            essentielle pour la classe Client car nous sommes dans le
+            contexte d'un système de reservation de voyages)<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Reservation</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Reservation</td>
+          <td style="width: 254px;">cohésion forte<br>
+          </td>
+          <td valign="top">La classe Réservation se réfère à une classe
+            intriséque dans le même domain (Client) et aux autres
+            classes des domaines différents. Mais elles sont toutes lui
+            intrinséques. &nbsp; <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Observer</td>
+          <td style="width: 254px;">cohésion forte <br>
+          </td>
+          <td valign="top">Classe abstrait, pas de références <br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Etat<br>
+          </td>
+          <td valign="top">cohésion forte<br>
+          </td>
+          <td valign="top">Enumération, pas de références<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Reservable<br>
+          </td>
+          <td valign="top">cohésion forte </td>
+          <td valign="top">Interface, pas de références<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Transport</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Place</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Ne se réfère qu'aux classes intrinséques. Pas
+            de cohésion d'instance mixte non plus grace aux sous-typage
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Siege</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Cabine</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Transport</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Ne se réfère qu'aux classes intrinséques. Pas
+            de cohésion d'instance mixte non plus grace aux sous-typage
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Avion</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Train</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Paquebot</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Section</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Ne se réfère qu'aux classes intrinséques. Pas
+            de cohésion d'instance mixte non plus grace aux sous-typage
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionSieges</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Ne se réfère qu'aux classes intrinséques. Pas
+            de cohésion d'instance mixte non plus grace aux sous-typage
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionA, ..., SectionP</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionCabines</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Ne se réfère qu'aux classes intrinséques. Pas
+            de cohésion d'instance mixte non plus grace aux sous-typage
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionI, ..., &nbsp;SectionFD</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Disposition</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top">Ne se réfère qu'aux classes intrinséques. Pas
+            de cohésion d'instance mixte non plus grace aux sous-typage
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Etroite, ..., Confort</td>
+          <td style="width: 254px;">cohésion forte </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Paiement</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Paiement</td>
+          <td style="width: 254px;">cohésion forte<br>
+          </td>
+          <td valign="top">Aucun référence externe grace à l'interface
+            PayableService. Toutes les classes référentiées sont lui
+            intrinséques<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CarteCredit</td>
+          <td style="width: 254px;">cohésion forte<br>
+          </td>
+          <td valign="top">Se réfère seulement aus classes intrinséques.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Annulation</td>
+          <td style="width: 254px;">cohésion forte</td>
+          <td valign="top">Se réfère seulement aus classes intrinséques.
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">TransactionPaiment<br>
+          </td>
+          <td valign="top">cohésion forte </td>
+          <td valign="top">Se réfère seulement aus classes intrinséques.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    On constate alors que la plupart de classes ont une cohésion forte
+    et seulement quelques classes ont une cohésion de domaine mixte.<br>
+    Ces sont les classes de domaine d'application du système, soit les
+    classes controlleurs, dont la nature prevoit interaction avec
+    plusieurs autres<br>
+    classes. Alor, tel design est considéré acceptable. <br>
+    <br>
+    <h3><br>
+    </h3>
+    <h3>Tâche 7. Discussion du fardeau des classes</h3>
     <table style="text-align: left; width: 510px;" cellspacing="2"
       cellpadding="2" border="1">
       <tbody>
