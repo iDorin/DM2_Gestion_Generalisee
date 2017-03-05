@@ -1,0 +1,52 @@
+A = Na/Nc
+I = Ce/(Ca + Ce)
+
+Paquet Administrateur:
+Na = 0
+Nc = 2
+Ca = 0
+Ce = 3
+A = 0/2 = 0
+I = 3/(0 + 3) = 1
+
+Paquet Voyage:
+Na = 4
+Nc = 16
+Ca = 4
+Ce = 2
+A = 4/16 = 0.25
+I = 2/(4 + 2) = 0.33
+
+Paquet Client:
+Na = 0
+Nc = 2
+Ca = 1
+Ce = 2
+A = 0/2 = 0
+I = 2/(1 + 2) = 0.67
+
+Paquet Reservation:
+Na = 2
+Nc = 4
+Ca = 1
+Ce = 2
+A = 2/4 = 0.5
+I = 2/(1 + 2) = 0.67
+
+Paquet Transport:
+Na = 6
+Nc = 24
+Ca = 2
+Ce = 0
+A = 6/24 = 0.25
+I = 2/(0 + 2) = 1
+
+Paquet Paiement:
+Na = 1
+Nc = 5
+Ca = 2
+Ce = 0
+A = 1/5 = 0.2
+I = 0/(2 + 0) = 0
+
+
