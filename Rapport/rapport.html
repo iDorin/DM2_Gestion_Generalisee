@@ -1091,7 +1091,19 @@
     plus faible, qu'une classe du domaine d'application.<br>
     <br>
     <h3>Tâche 8. Graphe IA et justification</h3>
-    <p>Abstraction A = # classes abstraites / # classes total<br>
+    <p><i><b>Abstraction </b><br>
+      </i></p>
+    <p><i>A = Na / Nc</i><i><br>
+      </i></p>
+    <p><i>Na = # classes abstraites </i><i><br>
+      </i><i>Nc = # classes total</i><br>
+    </p>
+    <p><i><b>Instabilité </b><br>
+      </i></p>
+    <p><i>I = Ce / (Ca + Ce)</i><i><br>
+      </i></p>
+    <p><i>Ce = # de dépendances sortantes </i><i><br>
+      </i><i>Ca = # de dépendances entrantes</i><br>
     </p>
     <table width="895" height="85" cellspacing="2" cellpadding="2"
       border="1">
@@ -1099,32 +1111,127 @@
         <tr>
           <td valign="top"><b>Paquet</b><br>
           </td>
+          <td valign="top"><b>Na</b><br>
+          </td>
+          <td valign="top"><b>Nc</b><br>
+          </td>
+          <td valign="top"><b>Ca</b><br>
+          </td>
+          <td valign="top"><b>Ce</b><br>
+          </td>
           <td valign="top"><b>Abrstraction</b><br>
           </td>
           <td valign="top"><b>Instabilité</b><br>
           </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top">Administration<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">0<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
           </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top">Voyage<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">16<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">4/16=0.25<br>
+          </td>
+          <td valign="top">2/6=0.33<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Client<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">0/2=0<br>
+          </td>
+          <td valign="top">2/3=0.67<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Reservation<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">2/4=0.5<br>
+          </td>
+          <td valign="top">2/3=0.67<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Transport<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top">24<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">6/24=0.25<br>
+          </td>
+          <td valign="top">2/2=1<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Paiement<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">2/5=0.4<br>
+          </td>
+          <td valign="top">0<br>
           </td>
         </tr>
       </tbody>
     </table>
-    <p><br>
-    </p>
-    TO DO
+    <img src="Design/graphe_ia.png" alt="graph ratio abstraction vs
+      instability" width="692" height="637"><br>
+    <br>
+    <br>
+    Selon le <i>Stable Abstraction Principle</i>, les paquetes ne
+    doivent être très éloignés de la diagonale descendante appelée <i>The
+      Main Sequence</i>.<br>
+    Effectivement, dans notre système, les classes sont plus ou moins
+    situées près de la diagonale. <br>
+    <br>
     <h3>Tâche 9. Justification de l'application des principes de
       conception</h3>
     TO DO
