@@ -8,4 +8,4 @@ context Croisiere
 
 context Croisiere
    inv: Croisiere.allInstances() -> forAll(t1, t2: Croisiere 
-           | t1 <> t2 AND t1.transport.id = t2.transport.id implies t1.dateDepart > t2.dateArrivee)
+           | t1 <> t2 AND t1.transport.id = t2.transport.id implies (t1.dateDepart > t2.dateArrivee OR t2.dateDepart > t1.dateArrivee))
