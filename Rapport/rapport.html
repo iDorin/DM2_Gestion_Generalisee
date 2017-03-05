@@ -1,376 +1,739 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>rapport</title></head>
-<body>
-<span style="font-weight: bold;">IFT 3911. Analyse et
-conception des logiciels</span><br>
-<h1>Dévoir maison 2<br>
-Système de Gestion de Réservation Généralisé</h1>
-<br>
-<h2>Information générale</h2>
-<span style="font-weight: bold;">Nom:</span>&nbsp;Georgiy
-Gegiya <br>
-<span style="font-weight: bold;">Matricule:</span>
-5468<br>
-<span style="font-weight: bold;">Courriel:</span>&nbsp;<span style="color: rgb(119, 119, 119); font-family: &quot;normal arial&quot;,sans-serif; font-size: 12px; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span><span style="color: rgb(119, 119, 119); font-family: &quot;normal arial&quot;,sans-serif; font-size: 12px; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span>gegiya@gmail.com<br>
-<span style="font-weight: bold;">temps mis:</span>
-40 heures<br>
-<br>
-<span style="font-weight: bold;">Nom:</span> Dorin
-Diaconu <br>
-<span style="font-weight: bold;">Matricule:</span>
-7978 <br>
-<span style="font-weight: bold;">Courriel:</span>
-dorinplus@gmail.com <br>
-<span style="font-weight: bold;">temps mis:</span>
-40 heures<br>
-<br>
-<h2>Distribution des tâches</h2>
-<span style="font-weight: bold;">Soumetteur:</span>
-Dorin Diaconu<br>
-<br>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="font-weight: bold;">Tâche</td>
-<td>&nbsp;<span style="font-weight: bold;">Georgiy</span></td>
-<td style="font-weight: bold;">Dorin</td>
-</tr>
-<tr>
-<td>Tâche 1. Diagramme de classe</td>
-<td>Déscription des cas d'utilisation (100%)</td>
-<td>Diagramme de cas d'utilisation (100%)</td>
-</tr>
-<tr>
-<td>Tâche 2. Diagramme de séquence ou de collaboration</td>
-<td>Combiné</td>
-<td>Combiné</td>
-</tr>
-<tr>
-<td>Tâche 3. Diagramme de paquets</td>
-<td>Combiné</td>
-<td>Combiné</td>
-</tr>
-<tr><td>Tâche 4. Contraintes OCL</td><td>Combiné</td><td>Combiné</td></tr><tr>
-<td>Tâche 5. Identification des modules réutilisables</td>
-<td>Combiné</td>
-<td>Combiné</td>
-</tr>
-<tr>
-<td>Tâche 6. Discussion de couplage et de la cohésion des
-modules</td>
-<td>Combiné</td>
-<td>Combiné</td>
-</tr>
-<tr>
-<td>Tâche 7. Discussion du fardeau des classes</td>
-<td>90%</td>
-<td>10%</td>
-</tr>
-<tr>
-<td>Tâche 8. Graphe IA et justification</td>
-<td>10%</td>
-<td>90%</td>
-</tr>
-<tr>
-<td>Tâche 9. Justification de l'application des principes
-de conception</td>
-<td>Combiné</td>
-<td>Combiné</td>
-</tr>
-<tr>
-<td>Tâche 10. Implémentation désign en Java</td>
-<td>Combiné</td>
-<td>Combiné</td>
-</tr>
-<tr>
-<td>Total</td>
-<td>&nbsp;(50%)</td>
-<td>(50%)</td>
-</tr>
-</tbody>
-</table>
-<br>
-<br>
-<h2>Désign logiciel</h2>
-Les <a href="Design">fichiers</a> de diagrammes,
-inclussivement les projets en format .vpp.<br>
-<br>
-<h3>Tâche 1. Diagramme de classe</h3>
-<img style="width: 1956px; height: 1651px;" alt="Diagramme de classes" src="Design/diagramme_classe.png"><br>
-<h3><br>
-</h3>
-<h3>Tâche 2. Diagramme de séquence ou de collaboration</h3>
-<img style="width: 983px; height: 437px;" alt="Verification trajet disponnible" src="Design/diagramme_sequence_verification.png"><br>
-<br>
-<br>
-<br>
-<img style="width: 771px; height: 366px;" alt="Reservation place" src="Design/diagramme_sequence_reservation.png"><br>
-<br>
-<br>
-<br>
-<img style="width: 1041px; height: 439px;" alt="Paiement place" src="Design/diagramme_sequence_paiement.png"><br>
-<br>
-<br>
-<br>
-<img style="width: 1195px; height: 818px;" alt="Changement ou annulation place" src="Design/diagramme_sequence_annuler-changer.png"><br>
-<br>
-<h3>Tâche 3. Diagramme de paquets</h3>
-<img style="width: 1303px; height: 1066px;" alt="Diagramme de paquets" src="Design/diagramme_paquets.png">
-<h3>Tâche 4. Contraintes OCL</h3>1. Le port de départ et d'arrivée doit être le même:<br><br><span style="font-weight: bold;">context</span> Trajet<br>&nbsp;&nbsp; <span style="font-weight: bold;">inv</span>: self.départ.port = self.arrivée.port<br><br><br>2. Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas:<br><br><span style="font-weight: bold;">context</span> Paquebot<br>&nbsp;&nbsp; <span style="font-weight: bold;">inv</span>: self.transport.trajet.croisiere.<span style="font-weight: bold;">allInstances</span>() -&gt; <span style="font-weight: bold;">forAll</span>(t1, t2: Croisiere.villesStationnement<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | t1 &lt;&gt; t2)<br><br><h3>Tâche 5. Identification des modules réutilisables</h3>
-<table style="text-align: left; width: 510px;" border="1" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="font-weight: bold; width: 238px;">Module</td>
-
-<td style="font-weight: bold; width: 254px;">Réutilisation</td>
-</tr>
-<tr>
-<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
-Administration</td>
-
-<td style="width: 254px;"></td>
-</tr>
-<tr>
-<td style="width: 238px;">Administrateur</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">SystemeAdmin</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
-Voyage</td>
-
-<td style="width: 254px;"></td>
-</tr>
-<tr>
-<td style="width: 238px;">LogInfoTrajet</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Compagnie</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">CompagnieAerienne</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">CompagnieCroisiere</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">CompagnieTrain</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">DetailTrajet</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">Trajet</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">Vol</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Croisiere</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">LigneTrain</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Station</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">Aeroport</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Port</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Gare</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Sujet</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">PlaceParTrajet</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
-&nbsp;Client</span></td>
-
-<td style="width: 254px;"></td>
-</tr>
-<tr>
-<td style="width: 238px;">SystemeClient</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Client</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
-Reservation</span></td>
-
-<td style="width: 254px;"></td>
-</tr>
-<tr>
-<td style="width: 238px;">Reservation</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">Observer</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
-Transport</span></td>
-
-<td style="width: 254px;"></td>
-</tr>
-<tr>
-<td style="width: 238px;">Place</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">Siege</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Cabine</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Transport</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">Avion</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Train</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Paquebot</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Section</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">SectionSieges</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">SectionA, ..., SectionP</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">SectionCabines</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">SectionI, ..., &nbsp;SectionFD</td>
-
-<td style="width: 254px;">Moyenne</td>
-</tr>
-<tr>
-<td style="width: 238px;">Disposition</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">Etroite, ..., Confort</td>
-
-<td style="width: 254px;">Faible</td>
-</tr>
-<tr>
-<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet Paiement</span></td>
-
-<td style="width: 254px;"></td>
-</tr>
-<tr>
-<td style="width: 238px;">Paiement</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">CarteCredit</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-<tr>
-<td style="width: 238px;">Annulation</td>
-
-<td style="width: 254px;">Elevée</td>
-</tr>
-
-
-
-
-
-
-
-
-
-</tbody>
-</table>
-<span style="font-weight: bold;"><br></span><h3>Tâche 6. Discussion de couplage et de la cohésion des modules</h3>TO DO
-<h3>Tâche 7. Discussion du fardeau des classes</h3>TO DO
-<h3>Tâche 8. Graphe IA et justification</h3>TO DO
-<h3>Tâche 9. Justification de l'application des principes de
-conception</h3>TO DO
-<h3>Tâche 10. Implémentation désign en Java</h3>TO DO
-<br>
-</body></html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="content-type">
+    <title>rapport</title>
+  </head>
+  <body>
+    <span style="font-weight: bold;">IFT 3911. Analyse et conception des
+      logiciels</span><br>
+    <h1>Dévoir maison 2<br>
+      Système de Gestion de Réservation Généralisé</h1>
+    <br>
+    <h2>Information générale</h2>
+    <span style="font-weight: bold;">Nom:</span>&nbsp;Georgiy Gegiya <br>
+    <span style="font-weight: bold;">Matricule:</span> 5468<br>
+    <span style="font-weight: bold;">Courriel:</span>&nbsp;<span
+      style="color: rgb(119, 119, 119); font-family: &quot;normal
+      arial&quot;,sans-serif; font-size: 12px; font-style: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      background-color: rgb(255, 255, 255); display: inline ! important;
+      float: none;"></span><span style="color: rgb(119, 119, 119);
+      font-family: &quot;normal arial&quot;,sans-serif; font-size: 12px;
+      font-style: normal; font-weight: normal; letter-spacing: normal;
+      orphans: 2; text-align: start; text-indent: 0px; text-transform:
+      none; white-space: normal; widows: 2; word-spacing: 0px;
+      background-color: rgb(255, 255, 255); display: inline ! important;
+      float: none;"></span>gegiya@gmail.com<br>
+    <span style="font-weight: bold;">temps mis:</span> 40 heures<br>
+    <br>
+    <span style="font-weight: bold;">Nom:</span> Dorin Diaconu <br>
+    <span style="font-weight: bold;">Matricule:</span> 7978 <br>
+    <span style="font-weight: bold;">Courriel:</span>
+    dorinplus@gmail.com <br>
+    <span style="font-weight: bold;">temps mis:</span> 40 heures<br>
+    <br>
+    <h2>Distribution des tâches</h2>
+    <span style="font-weight: bold;">Soumetteur:</span> Dorin Diaconu<br>
+    <br>
+    <table style="text-align: left; width: 100%;" cellspacing="2"
+      cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="font-weight: bold;">Tâche</td>
+          <td>&nbsp;<span style="font-weight: bold;">Georgiy</span></td>
+          <td style="font-weight: bold;">Dorin</td>
+        </tr>
+        <tr>
+          <td>Tâche 1. Diagramme de classe</td>
+          <td>Déscription des cas d'utilisation (100%)</td>
+          <td>Diagramme de cas d'utilisation (100%)</td>
+        </tr>
+        <tr>
+          <td>Tâche 2. Diagramme de séquence ou de collaboration</td>
+          <td>Combiné</td>
+          <td>Combiné</td>
+        </tr>
+        <tr>
+          <td>Tâche 3. Diagramme de paquets</td>
+          <td>Combiné</td>
+          <td>Combiné</td>
+        </tr>
+        <tr>
+          <td>Tâche 4. Contraintes OCL</td>
+          <td>Combiné</td>
+          <td>Combiné</td>
+        </tr>
+        <tr>
+          <td>Tâche 5. Identification des modules réutilisables</td>
+          <td>Combiné</td>
+          <td>Combiné</td>
+        </tr>
+        <tr>
+          <td>Tâche 6. Discussion de couplage et de la cohésion des
+            modules</td>
+          <td>Combiné</td>
+          <td>Combiné</td>
+        </tr>
+        <tr>
+          <td>Tâche 7. Discussion du fardeau des classes</td>
+          <td>90%</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Tâche 8. Graphe IA et justification</td>
+          <td>10%</td>
+          <td>90%</td>
+        </tr>
+        <tr>
+          <td>Tâche 9. Justification de l'application des principes de
+            conception</td>
+          <td>Combiné</td>
+          <td>Combiné</td>
+        </tr>
+        <tr>
+          <td>Tâche 10. Implémentation désign en Java</td>
+          <td>Combiné</td>
+          <td>Combiné</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>&nbsp;(50%)</td>
+          <td>(50%)</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <h2>Désign logiciel</h2>
+    Les <a href="Design">fichiers</a> de diagrammes, inclussivement les
+    projets en format .vpp.<br>
+    <br>
+    <h3>Tâche 1. Diagramme de classe</h3>
+    <img style="width: 1956px; height: 1651px;" alt="Diagramme de
+      classes" src="Design/diagramme_classe.png"><br>
+    <h3><br>
+    </h3>
+    <h3>Tâche 2. Diagramme de séquence ou de collaboration</h3>
+    <img style="width: 983px; height: 437px;" alt="Verification trajet
+      disponnible" src="Design/diagramme_sequence_verification.png"><br>
+    <br>
+    <br>
+    <br>
+    <img style="width: 771px; height: 366px;" alt="Reservation place"
+      src="Design/diagramme_sequence_reservation.png"><br>
+    <br>
+    <br>
+    <br>
+    <img style="width: 1041px; height: 439px;" alt="Paiement place"
+      src="Design/diagramme_sequence_paiement.png"><br>
+    <br>
+    <br>
+    <br>
+    <img style="width: 1195px; height: 818px;" alt="Changement ou
+      annulation place"
+      src="Design/diagramme_sequence_annuler-changer.png"><br>
+    <br>
+    <h3>Tâche 3. Diagramme de paquets</h3>
+    <img style="width: 1303px; height: 1066px;" alt="Diagramme de
+      paquets" src="Design/diagramme_paquets.png">
+    <h3>Tâche 4. Contraintes OCL</h3>
+    1. Le port de départ et d'arrivée doit être le même:<br>
+    <font size="+1"><br>
+    </font>
+    <pre><font size="+1"><b>context</b> Croisiere</font></pre>
+    <pre><font size="+1">&nbsp;&nbsp; <b>inv:</b> self.detail.depart.uiniqueId = self.detail.arrivee.uniqueId</font></pre>
+    <br>
+    2. Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils
+    ne se chevauchent pas:<br>
+    (Constrainte temporelle)<br>
+    <br>
+    <pre><font size="+1"><b>context</b> Croisiere</font></pre>
+    <pre><font size="+1">&nbsp;&nbsp; <b>inv:</b> Croisiere.allInstances() -&gt; forAll(t1, t2: Croisiere </font></pre>
+    <pre><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | t1 &lt;&gt; t2 AND t1.transport.id = t2.transport.id implies (t1.dateDepart &gt; t2.dateArrivee OR t2.dateDepart &gt; t1.DateArrive))</font></pre>
+    <br>
+    <h3>Tâche 5. Identification des modules réutilisables</h3>
+    <table style="text-align: left; width: 510px;" cellspacing="2"
+      cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="font-weight: bold; width: 238px;">Module</td>
+          <td style="font-weight: bold; width: 254px;">Réutilisation</td>
+        </tr>
+        <tr>
+          <td style="font-style: italic; font-weight: bold; width:
+            238px;">Paquet Administration</td>
+          <td style="width: 254px;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Administrateur</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SystemeAdmin</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="font-style: italic; font-weight: bold; width:
+            238px;">Paquet Voyage</td>
+          <td style="width: 254px;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">LogInfoTrajet</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Compagnie</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieAerienne</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieCroisiere</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieTrain</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">DetailTrajet</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Trajet</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Vol</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Croisiere</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">LigneTrain</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Station</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Aeroport</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Port</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Gare</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Sujet</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">PlaceParTrajet</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet &nbsp;Client</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SystemeClient</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Client</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Reservation</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Reservation</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Observer</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Transport</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Place</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Siege</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Cabine</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Transport</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Avion</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Train</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Paquebot</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Section</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionSieges</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionA, ..., SectionP</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionCabines</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionI, ..., &nbsp;SectionFD</td>
+          <td style="width: 254px;">Moyenne</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Disposition</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Etroite, ..., Confort</td>
+          <td style="width: 254px;">Faible</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Paiement</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Paiement</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CarteCredit</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Annulation</td>
+          <td style="width: 254px;">Elevée</td>
+        </tr>
+      </tbody>
+    </table>
+    <span style="font-weight: bold;"><br>
+    </span>
+    <h3>Tâche 6. Discussion de couplage et de la cohésion des modules</h3>
+    <h4>Couplage</h4>
+    Lors de la conception du système nous avons essayé de suivre le
+    principe d'une faible couplage et une forte cohésion.<br>
+    Effectivement, un seul type de couplage de modules est un couplage
+    par données.<br>
+    De plus, pour diminuer le nombre des références entre les paquets,
+    nous avons introduit des interfaces <b>"Reservable"</b> et <b>"PayableService".</b><br>
+    Cette mésure nous a permis d'augmenter la réutilisabilité de paquets
+    <b>"Paiement"</b> et <b>"Reservation".<br>
+      <br>
+    </b>
+    <h4><b> Cohésion</b></h4>
+    <b><br>
+    </b>
+    <h3>Tâche 7. Discussion du fardeau des classes</h3>
+    <br>
+    <table style="text-align: left; width: 510px;" cellspacing="2"
+      cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="font-weight: bold; width: 238px;">Module</td>
+          <td style="font-weight: bold; width: 254px;">Fardeau</td>
+          <td valign="top"><b>Domaine</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-style: italic; font-weight: bold; width:
+            238px;">Paquet Administration</td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Administrateur</td>
+          <td style="width: 254px;">19<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SystemeAdmin</td>
+          <td style="width: 254px;">19<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-style: italic; font-weight: bold; width:
+            238px;">Paquet Voyage</td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">LogInfoTrajet</td>
+          <td style="width: 254px;">18<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Compagnie</td>
+          <td style="width: 254px;">18<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieAerienne</td>
+          <td style="width: 254px;">18<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieCroisiere</td>
+          <td style="width: 254px;">18<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CompagnieTrain</td>
+          <td style="width: 254px;">18<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">DetailTrajet</td>
+          <td style="width: 254px;">17<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Trajet</td>
+          <td style="width: 254px;">17</td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Vol</td>
+          <td style="width: 254px;">18<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Croisiere</td>
+          <td style="width: 254px;">18</td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">LigneTrain</td>
+          <td style="width: 254px;">18<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Station</td>
+          <td style="width: 254px;">1<br>
+          </td>
+          <td valign="top">Métier</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Aeroport</td>
+          <td style="width: 254px;">2<br>
+          </td>
+          <td valign="top">Métier</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Port</td>
+          <td style="width: 254px;">2<br>
+          </td>
+          <td valign="top">Métier</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Gare</td>
+          <td style="width: 254px;">2<br>
+          </td>
+          <td valign="top">Métier</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Sujet</td>
+          <td style="width: 254px;">1<br>
+          </td>
+          <td valign="top">Métier</td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">PlaceParTrajet</td>
+          <td style="width: 254px;">9</td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet &nbsp;Client</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SystemeClient</td>
+          <td style="width: 254px;">9<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Client</td>
+          <td style="width: 254px;">8<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Reservation</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Reservation</td>
+          <td style="width: 254px;">7<br>
+          </td>
+          <td valign="top">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Observer</td>
+          <td style="width: 254px;">1<br>
+          </td>
+          <td valign="top">Architecture<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Etat<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">Métier</td>
+        </tr>
+        <tr>
+          <td valign="top">Reservable<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Transport</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Place</td>
+          <td style="width: 254px;">2<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Siege</td>
+          <td style="width: 254px;">3<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Cabine</td>
+          <td style="width: 254px;">3<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Transport</td>
+          <td style="width: 254px;">4<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Avion</td>
+          <td style="width: 254px;">5<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Train</td>
+          <td style="width: 254px;">5<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Paquebot</td>
+          <td style="width: 254px;">5<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Section</td>
+          <td style="width: 254px;">3<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionSieges</td>
+          <td style="width: 254px;">5<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionA, ..., SectionP</td>
+          <td style="width: 254px;">6<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionCabines</td>
+          <td style="width: 254px;">4<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">SectionI, ..., &nbsp;SectionFD</td>
+          <td style="width: 254px;">5<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Disposition</td>
+          <td style="width: 254px;">2<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Etroite, ..., Confort</td>
+          <td style="width: 254px;">3<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;"><span style="font-style: italic;
+              font-weight: bold;">Paquet Paiement</span></td>
+          <td style="width: 254px;"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Paiement</td>
+          <td style="width: 254px;">6<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">CarteCredit</td>
+          <td style="width: 254px;">2</td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 238px;">Annulation</td>
+          <td style="width: 254px;">6</td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">TransactionPaiment<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">Métier<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    On observe alors un fardeau plus élevé pour les classes du domaine
+    d'application que pour celles du domaine de métier.<br>
+    Ce comportement vient en accord avec le principe de designe
+    stipulant qu'une classe du domaine plus "bas" doit avoir un fardeau
+    plus faible, qu'une classe du domaine d'application.<br>
+    <br>
+    <h3>Tâche 8. Graphe IA et justification</h3>
+    TO DO
+    <h3>Tâche 9. Justification de l'application des principes de
+      conception</h3>
+    TO DO
+    <h3>Tâche 10. Implémentation désign en Java</h3>
+    TO DO <br>
+  </body>
+</html>
