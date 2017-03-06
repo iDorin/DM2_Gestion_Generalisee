@@ -1,1335 +1,1349 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta content="text/html; charset=windows-1252"
-      http-equiv="content-type">
-    <title>rapport</title>
-  </head>
-  <body>
-    <span style="font-weight: bold;">IFT 3911. Analyse et conception des
-      logiciels</span><br>
-    <h1>Dévoir maison 2<br>
-      Système de Gestion de Réservation Généralisé</h1>
-    <br>
-    <h2>Information générale</h2>
-    <span style="font-weight: bold;">Nom:</span>&nbsp;Georgiy Gegiya <br>
-    <span style="font-weight: bold;">Matricule:</span> 5468<br>
-    <span style="font-weight: bold;">Courriel:</span>&nbsp;<span
-      style="color: rgb(119, 119, 119); font-family: &quot;normal
-      arial&quot;,sans-serif; font-size: 12px; font-style: normal;
-      font-weight: normal; letter-spacing: normal; orphans: 2;
-      text-align: start; text-indent: 0px; text-transform: none;
-      white-space: normal; widows: 2; word-spacing: 0px;
-      background-color: rgb(255, 255, 255); display: inline ! important;
-      float: none;"></span><span style="color: rgb(119, 119, 119);
-      font-family: &quot;normal arial&quot;,sans-serif; font-size: 12px;
-      font-style: normal; font-weight: normal; letter-spacing: normal;
-      orphans: 2; text-align: start; text-indent: 0px; text-transform:
-      none; white-space: normal; widows: 2; word-spacing: 0px;
-      background-color: rgb(255, 255, 255); display: inline ! important;
-      float: none;"></span>gegiya@gmail.com<br>
-    <span style="font-weight: bold;">temps mis:</span> 40 heures<br>
-    <br>
-    <span style="font-weight: bold;">Nom:</span> Dorin Diaconu <br>
-    <span style="font-weight: bold;">Matricule:</span> 7978 <br>
-    <span style="font-weight: bold;">Courriel:</span>
-    dorinplus@gmail.com <br>
-    <span style="font-weight: bold;">temps mis:</span> 40 heures<br>
-    <br>
-    <h2>Distribution des tâches</h2>
-    <span style="font-weight: bold;">Soumetteur:</span> Georgiy Gegiya<br>
-    <br>
-    <table style="text-align: left; width: 100%;" cellspacing="2"
-      cellpadding="2" border="1">
-      <tbody>
-        <tr>
-          <td style="font-weight: bold;">Tâche</td>
-          <td>&nbsp;<span style="font-weight: bold;">Georgiy</span></td>
-          <td style="font-weight: bold;">Dorin</td>
-        </tr>
-        <tr>
-          <td>Tâche 1. Diagramme de classe</td>
-          <td>Description des cas d'utilisation (100%)</td>
-          <td>Diagramme de cas d'utilisation (100%)</td>
-        </tr>
-        <tr>
-          <td>Tâche 2. Diagramme de séquence ou de collaboration</td>
-          <td>Combiné</td>
-          <td>Combiné</td>
-        </tr>
-        <tr>
-          <td>Tâche 3. Diagramme de paquets</td>
-          <td>Combiné</td>
-          <td>Combiné</td>
-        </tr>
-        <tr>
-          <td>Tâche 4. Contraintes OCL</td>
-          <td>Combiné</td>
-          <td>Combiné</td>
-        </tr>
-        <tr>
-          <td>Tâche 5. Identification des modules réutilisables</td>
-          <td>Combiné</td>
-          <td>Combiné</td>
-        </tr>
-        <tr>
-          <td>Tâche 6. Discussion de couplage et de la cohésion des
-            modules</td>
-          <td>Combiné</td>
-          <td>Combiné</td>
-        </tr>
-        <tr>
-          <td>Tâche 7. Discussion du fardeau des classes</td>
-          <td>90%</td>
-          <td>10%</td>
-        </tr>
-        <tr>
-          <td>Tâche 8. Graphe IA et justification</td>
-          <td>10%</td>
-          <td>90%</td>
-        </tr>
-        <tr>
-          <td>Tâche 9. Justification de l'application des principes de
-            conception</td>
-          <td>Combiné</td>
-          <td>Combiné</td>
-        </tr>
-        <tr>
-          <td>Tâche 10. Implémentation désign en Java</td>
-          <td>Combiné</td>
-          <td>Combiné</td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>&nbsp;(50%)</td>
-          <td>(50%)</td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    <br>
-    <h2>Désign logiciel</h2>
-    Les <a href="Design">fichiers</a> de diagrammes, inclusivement le
-    projet en format .vpp.<br>
-    <br>
-    <h3>Tâche 1. Diagramme de classe</h3>
-    <img style="width: 1956px; height: 1651px;" alt="Diagramme de
-      classes" src="Design/diagramme_classe.png"><br>
-    <h3><br>
-    </h3>
-    <h3>Tâche 2. Diagramme de séquence ou de collaboration</h3>
-    <img style="width: 983px; height: 437px;" alt="Verification trajet
-      disponnible" src="Design/diagramme_sequence_verification.png"><br>
-    <br>
-    <br>
-    <br>
-    <img style="width: 771px; height: 366px;" alt="Reservation place"
-      src="Design/diagramme_sequence_reservation.png"><br>
-    <br>
-    <br>
-    <br>
-    <img style="width: 1041px; height: 439px;" alt="Paiement place"
-      src="Design/diagramme_sequence_paiement.png"><br>
-    <br>
-    <br>
-    <br>
-    <img style="width: 1195px; height: 818px;" alt="Changement ou
-      annulation place"
-      src="Design/diagramme_sequence_annuler-changer.png"><br>
-    <br>
-    <h3>Tâche 3. Diagramme de paquets</h3>
-    <img style="width: 1303px; height: 1066px;" alt="Diagramme de
-      paquets" src="Design/diagramme_paquets.png">
-    <h3>Tâche 4. Contraintes OCL</h3>
-    1. Le port de départ et d'arrivée doit être le même:<br>
-    <font size="+1"><br>
-    </font>
-    <pre><font size="+1"><b>context</b> Croisiere</font></pre>
-    <pre><font size="+1">&nbsp;&nbsp; <b>inv:</b> self.detail.depart.uiniqueId = self.detail.arrivee.uniqueId</font></pre>
-    <br>
-    2. Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils
-    ne se chevauchent pas:<br>
-    (Contrainte temporelle)<br>
-    <br>
-    <pre><font size="+1"><b>context</b> Croisiere</font></pre>
-    <pre><font size="+1">&nbsp;&nbsp; <b>inv:</b> Croisiere.allInstances() -&gt; forAll(t1, t2: Croisiere </font></pre>
-    <pre><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | t1 &lt;&gt; t2 AND t1.transport.id = t2.transport.id implies (t1.dateDepart &gt; t2.dateArrivee OR t2.dateDepart &gt; t1.DateArrive))</font></pre>
-    <br>
-    <h3>Tâche 5. Identification des modules réutilisables</h3>
-    <table style="text-align: left; width: 510px;" cellspacing="2"
-      cellpadding="2" border="1">
-      <tbody>
-        <tr>
-          <td style="font-weight: bold; width: 238px;">Module</td>
-          <td style="font-weight: bold; width: 254px;">Réutilisation</td>
-        </tr>
-        <tr>
-          <td style="font-style: italic; font-weight: bold; width:
-            238px;">Paquet Administration</td>
-          <td style="width: 254px;"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Administrateur</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SystemeAdmin</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="font-style: italic; font-weight: bold; width:
-            238px;">Paquet Voyage</td>
-          <td style="width: 254px;"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">LogInfoTrajet</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Compagnie</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieAerienne</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieCroisiere</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieTrain</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">DetailTrajet</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Trajet</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Vol</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Croisiere</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">LigneTrain</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Station</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Aeroport</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Port</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Gare</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Sujet</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">PlaceParTrajet</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet &nbsp;Client</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SystemeClient</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Client</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Reservation</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Reservation</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Observer</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Transport</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Place</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Siege</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Cabine</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Transport</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Avion</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Train</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Paquebot</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Section</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionSieges</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionA, ..., SectionP</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionCabines</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionI, ..., &nbsp;SectionFD</td>
-          <td style="width: 254px;">Moyenne</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Disposition</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Etroite, ..., Confort</td>
-          <td style="width: 254px;">Faible</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Paiement</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Paiement</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CarteCredit</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Annulation</td>
-          <td style="width: 254px;">Élevée<br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <span style="font-weight: bold;"><br>
-    </span>
-    <h3>Tâche 6. Discussion de couplage et de la cohésion des modules</h3>
-    <h4>Couplage</h4>
-    Lors de la conception du système nous avons essayé de suivre le
-    principe d'une faible couplage et une forte cohésion.<br>
-    Effectivement, un seul type de couplage de modules du système est le
-    couplage par données.<br>
-    De plus, afin de diminuer le nombre des références entre les
-    paquets, nous avons introduit des interfaces <b>"Reservable"</b> et
-    <b>"PayableService"</b>.<br>
-    Cette mésure nous a permis d'augmenter la réutilisabilité de paquets
-    <b>"Paiement"</b> et <b>"Reservation"</b>.<b><br>
-      <br>
-    </b>
-    <h4><b> Cohésion</b></h4>
-    <br>
-    <table style="text-align: left;" width="926" height="1467"
-      cellspacing="2" cellpadding="2" border="1">
-      <tbody>
-        <tr>
-          <td style="font-weight: bold; width: 238px;">Module</td>
-          <td style="font-weight: bold; width: 254px;">Cohésion</td>
-          <td valign="top"><b>Explication</b><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="font-style: italic; font-weight: bold; width:
-            238px;">Paquet Administration</td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Administrateur</td>
-          <td style="width: 254px;">domaine mixte<br>
-          </td>
-          <td valign="top">La classe Administrateur se réfère à la
-            classe d'une autre domaine: LogInfoVoyage qui lui est
-            extrinsèque<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SystemeAdmin</td>
-          <td style="width: 254px;">domaine mixte<br>
-          </td>
-          <td valign="top">La classe se réfère à plusieurs classes
-            extrinsèques des autres domaines <br>
-          </td>
-        </tr>
-        <tr>
-          <td style="font-style: italic; font-weight: bold; width:
-            238px;">Paquet Voyage</td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">LogInfoTrajet</td>
-          <td style="width: 254px;">cohésion forte<br>
-          </td>
-          <td valign="top">Toutes les classes référentes sont
-            intrinsèques et font partie du même domaine.<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Compagnie</td>
-          <td style="width: 254px;">cohésion forte<br>
-          </td>
-          <td valign="top">Les classes intrinsèques Trajet et
-            DetailTrajet appartiennent au même domaine. Les différent
-            types de compagnie sont séparés dans différentes classes:
-            CompagnieAérienne etc. <br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieAerienne</td>
-          <td style="width: 254px;">cohésion forte<br>
-          </td>
-          <td valign="top">Est une sous-classe de Compagnie<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieCroisiere</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Est une sous-classe de Compagnie</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieTrain</td>
-          <td style="width: 254px;">cohésion forte</td>
-          <td valign="top">Est une sous-classe de Compagnie</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">DetailTrajet</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Toutes les classes dont la classe
-            DetailTrajet fait référence sont lui intrinsèques et sont
-            dans le même domaine<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Trajet</td>
-          <td style="width: 254px;">cohésion forte</td>
-          <td valign="top">Toutes les classes dont la classe Trajet fait
-            référence sont lui intrinsèques. </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Vol</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Sous-classe de trajet </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Croisiere</td>
-          <td style="width: 254px;">cohésion forte</td>
-          <td valign="top">Sous-classe de trajet </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">LigneTrain</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Sous-classe de trajet </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Station</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Pas de cohésion de domaine mixte ni cohésion
-            de rôle mixte, car se réfère aux classes intrinséques
-            seulement.<br>
-            Pas de cohésion d'instance mixte, car on utilise les
-            sous-classes pour représenter différents types de station.<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Aeroport</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Sous-classe de Station<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Port</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Sous-classe de Station<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Gare</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Sous-classe de Station<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Sujet</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Sous-classe de Station<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">PlaceParTrajet</td>
-          <td style="width: 254px;">cohésion forte<br>
-          </td>
-          <td valign="top">Se réfère aux classes de domaines différents,
-            par conter elles sont toutes lui intrinsèques. Alors, pas de
-            cohésion de domaine mixte ni de cohésion de rôle mixte.<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet &nbsp;Client</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SystemeClient</td>
-          <td style="width: 254px;">domaine mixte<br>
-          </td>
-          <td valign="top">Se réfère à plusieurs classes extrinsèques du
-            même domaine. Pas de cohésion d'instance mixte, car la
-            classe est un singleton.<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Client</td>
-          <td style="width: 254px;">cohésion forte<br>
-          </td>
-          <td valign="top">Toutes les classes référées sont lui
-            intrinsèques. (On considère la classe <i>Réservation</i>
-            étant essentielle pour la classe Client car nous sommes dans
-            le contexte d'un système de réservation de voyages)<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Reservation</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Reservation</td>
-          <td style="width: 254px;">cohésion forte<br>
-          </td>
-          <td valign="top">La classe Réservation se réfère à une classe
-            intrinsèque dans le même domaine (Client) et aux autres
-            classes des domaines différents. Mais elles sont toutes lui
-            intrinsèques. &nbsp; <br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Observer</td>
-          <td style="width: 254px;">cohésion forte <br>
-          </td>
-          <td valign="top">Classe abstrait, pas de références <br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Etat<br>
-          </td>
-          <td valign="top">cohésion forte<br>
-          </td>
-          <td valign="top">Énumération, pas de références<br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Reservable<br>
-          </td>
-          <td valign="top">cohésion forte </td>
-          <td valign="top">Interface, pas de références<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Transport</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Place</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Ne se réfère qu'aux classes intrinsèques. Pas
-            de cohésion d'instance mixte non plus grâce aux sous-typage
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Siege</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Cabine</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Transport</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Ne se réfère qu'aux classes intrinsèques. Pas
-            de cohésion d'instance mixte non plus grâce aux sous-typage
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Avion</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Train</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Paquebot</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Section</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Ne se réfère qu'aux classes intrinsèques. Pas
-            de cohésion d'instance mixte non plus grâce aux sous-typage
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionSieges</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Ne se réfère qu'aux classes intrinsèques. Pas
-            de cohésion d'instance mixte non plus grâce aux sous-typage
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionA, ..., SectionP</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionCabines</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Ne se réfère qu'aux classes intrinsèques. Pas
-            de cohésion d'instance mixte non plus grâce aux sous-typage
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionI, ..., &nbsp;SectionFD</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Disposition</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top">Ne se réfère qu'aux classes intrinsèques. Pas
-            de cohésion d'instance mixte non plus grâce aux sous-typage
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Etroite, ..., Confort</td>
-          <td style="width: 254px;">cohésion forte </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Paiement</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Paiement</td>
-          <td style="width: 254px;">cohésion forte<br>
-          </td>
-          <td valign="top">Aucun référence externe grâce à l'interface
-            PayableService. Toutes les classes référentes sont lui
-            intrinsèques<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CarteCredit</td>
-          <td style="width: 254px;">cohésion forte<br>
-          </td>
-          <td valign="top">Se réfère seulement aux classes intrinsèques.<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Annulation</td>
-          <td style="width: 254px;">cohésion forte</td>
-          <td valign="top">Se réfère seulement aux classes intrinsèques.
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">TransactionPaiment<br>
-          </td>
-          <td valign="top">cohésion forte </td>
-          <td valign="top">Se réfère seulement aux classes intrinsèques.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    On constate alors que la plupart de classes ont une cohésion forte
-    et seulement quelques classes ont une cohésion de domaine mixte.<br>
-    Ces sont les classes de domaine d'application du système, soit les
-    classes controlleurs, dont la nature prevoit interaction avec
-    plusieurs autres<br>
-    classes. Alor, tel design est considéré acceptable. <br>
-    <br>
-    <h3><br>
-    </h3>
-    <h3>Tâche 7. Discussion du fardeau des classes</h3>
-    <table style="text-align: left; width: 510px;" cellspacing="2"
-      cellpadding="2" border="1">
-      <tbody>
-        <tr>
-          <td style="font-weight: bold; width: 238px;">Module</td>
-          <td style="font-weight: bold; width: 254px;">Fardeau</td>
-          <td valign="top"><b>Domaine</b><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="font-style: italic; font-weight: bold; width:
-            238px;">Paquet Administration</td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Administrateur</td>
-          <td style="width: 254px;">19<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SystemeAdmin</td>
-          <td style="width: 254px;">19<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="font-style: italic; font-weight: bold; width:
-            238px;">Paquet Voyage</td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">LogInfoTrajet</td>
-          <td style="width: 254px;">18<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Compagnie</td>
-          <td style="width: 254px;">18<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieAerienne</td>
-          <td style="width: 254px;">18<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieCroisiere</td>
-          <td style="width: 254px;">18<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CompagnieTrain</td>
-          <td style="width: 254px;">18<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">DetailTrajet</td>
-          <td style="width: 254px;">17<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Trajet</td>
-          <td style="width: 254px;">17</td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Vol</td>
-          <td style="width: 254px;">18<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Croisiere</td>
-          <td style="width: 254px;">18</td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">LigneTrain</td>
-          <td style="width: 254px;">18<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Station</td>
-          <td style="width: 254px;">1<br>
-          </td>
-          <td valign="top">Métier</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Aeroport</td>
-          <td style="width: 254px;">2<br>
-          </td>
-          <td valign="top">Métier</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Port</td>
-          <td style="width: 254px;">2<br>
-          </td>
-          <td valign="top">Métier</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Gare</td>
-          <td style="width: 254px;">2<br>
-          </td>
-          <td valign="top">Métier</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Sujet</td>
-          <td style="width: 254px;">1<br>
-          </td>
-          <td valign="top">Métier</td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">PlaceParTrajet</td>
-          <td style="width: 254px;">9</td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet &nbsp;Client</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SystemeClient</td>
-          <td style="width: 254px;">9<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Client</td>
-          <td style="width: 254px;">8<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Reservation</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Reservation</td>
-          <td style="width: 254px;">7<br>
-          </td>
-          <td valign="top">Application<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Observer</td>
-          <td style="width: 254px;">1<br>
-          </td>
-          <td valign="top">Architecture<br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Etat<br>
-          </td>
-          <td valign="top">1<br>
-          </td>
-          <td valign="top">Métier</td>
-        </tr>
-        <tr>
-          <td valign="top">Reservable<br>
-          </td>
-          <td valign="top">3<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Transport</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Place</td>
-          <td style="width: 254px;">2<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Siege</td>
-          <td style="width: 254px;">3<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Cabine</td>
-          <td style="width: 254px;">3<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Transport</td>
-          <td style="width: 254px;">4<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Avion</td>
-          <td style="width: 254px;">5<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Train</td>
-          <td style="width: 254px;">5<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Paquebot</td>
-          <td style="width: 254px;">5<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Section</td>
-          <td style="width: 254px;">3<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionSieges</td>
-          <td style="width: 254px;">5<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionA, ..., SectionP</td>
-          <td style="width: 254px;">6<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionCabines</td>
-          <td style="width: 254px;">4<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">SectionI, ..., &nbsp;SectionFD</td>
-          <td style="width: 254px;">5<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Disposition</td>
-          <td style="width: 254px;">2<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Etroite, ..., Confort</td>
-          <td style="width: 254px;">3<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;"><span style="font-style: italic;
-              font-weight: bold;">Paquet Paiement</span></td>
-          <td style="width: 254px;"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Paiement</td>
-          <td style="width: 254px;">6<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">CarteCredit</td>
-          <td style="width: 254px;">2</td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 238px;">Annulation</td>
-          <td style="width: 254px;">6</td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">TransactionPaiment<br>
-          </td>
-          <td valign="top">5<br>
-          </td>
-          <td valign="top">Métier<br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    On observe alors un fardeau plus élevé pour les classes du domaine
-    d'application que pour celles du domaine de métier.<br>
-    Ce comportement vient en accord avec le principe de design stipulant
-    qu'une classe du domaine plus "bas" doit avoir un fardeau plus
-    faible, qu'une classe du domaine d'application.<br>
-    <br>
-    <h3>Tâche 8. Graphe IA et justification</h3>
-    <p><i><b>Abstraction </b><br>
-      </i></p>
-    <p><i>A = Na / Nc</i><i><br>
-      </i></p>
-    <p><i>Na = # classes abstraites </i><i><br>
-      </i><i>Nc = # classes total</i><br>
-    </p>
-    <p><i><b>Instabilité </b><br>
-      </i></p>
-    <p><i>I = Ce / (Ca + Ce)</i><i><br>
-      </i></p>
-    <p><i>Ce = # de dépendances sortantes </i><i><br>
-      </i><i>Ca = # de dépendances entrantes</i><br>
-    </p>
-    <table width="895" height="85" cellspacing="2" cellpadding="2"
-      border="1">
-      <tbody>
-        <tr>
-          <td valign="top"><b>Paquet</b><br>
-          </td>
-          <td valign="top"><b>Na</b><br>
-          </td>
-          <td valign="top"><b>Nc</b><br>
-          </td>
-          <td valign="top"><b>Ca</b><br>
-          </td>
-          <td valign="top"><b>Ce</b><br>
-          </td>
-          <td valign="top"><b>Abstraction</b><br>
-          </td>
-          <td valign="top"><b>Instabilité</b><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Administration<br>
-          </td>
-          <td valign="top">0<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">0<br>
-          </td>
-          <td valign="top">3<br>
-          </td>
-          <td valign="top">0<br>
-          </td>
-          <td valign="top">1<br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Voyage<br>
-          </td>
-          <td valign="top">4<br>
-          </td>
-          <td valign="top">16<br>
-          </td>
-          <td valign="top">4<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">4/16=0.25<br>
-          </td>
-          <td valign="top">2/6=0.33<br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Client<br>
-          </td>
-          <td valign="top">0<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">1<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">0/2=0<br>
-          </td>
-          <td valign="top">2/3=0.67<br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Reservation<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">4<br>
-          </td>
-          <td valign="top">1<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">2/4=0.5<br>
-          </td>
-          <td valign="top">2/3=0.67<br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Transport<br>
-          </td>
-          <td valign="top">6<br>
-          </td>
-          <td valign="top">24<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">0<br>
-          </td>
-          <td valign="top">6/24=0.25<br>
-          </td>
-          <td valign="top">2/2=1<br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Paiement<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">5<br>
-          </td>
-          <td valign="top">2<br>
-          </td>
-          <td valign="top">0<br>
-          </td>
-          <td valign="top">2/5=0.4<br>
-          </td>
-          <td valign="top">0<br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <img src="Design/graphe_ia.png" alt="graph ratio abstraction vs
-      instability" width="692" height="637"><br>
-    <br>
-    <br>
-    Selon le <i>Stable Abstraction Principle</i>, les paquets ne
-    doivent être très éloignés de la diagonale descendante appelée <i>The
+<html><head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type"><title>rapport</title></head>
+<body>
+<span style="font-weight: bold;">IFT 3911. Analyse et
+conception des
+logiciels</span><br>
+<h1>Dévoir maison 2<br>
+Système de Gestion de Réservation Généralisé</h1>
+<br>
+<h2>Information générale</h2>
+<span style="font-weight: bold;">Nom:</span>&nbsp;Georgiy
+Gegiya <br>
+<span style="font-weight: bold;">Matricule:</span>
+5468<br>
+<span style="font-weight: bold;">Courriel:</span>&nbsp;<span style="color: rgb(119, 119, 119); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span><span style="color: rgb(119, 119, 119); font-family: &quot;normal arial&quot;,sans-serif; font-size: 12px; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span>gegiya@gmail.com<br>
+<span style="font-weight: bold;">temps mis:</span>
+35 heures<br>
+<br>
+<span style="font-weight: bold;">Nom:</span> Dorin
+Diaconu <br>
+<span style="font-weight: bold;">Matricule:</span>
+7978 <br>
+<span style="font-weight: bold;">Courriel:</span>
+dorinplus@gmail.com <br>
+<span style="font-weight: bold;">temps mis:</span>
+35 heures<br>
+<br>
+<h2>Distribution des tâches</h2>
+<span style="font-weight: bold;">Soumetteur:</span>
+Georgiy Gegiya<br>
+<br>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="font-weight: bold;">Tâche</td>
+<td>&nbsp;<span style="font-weight: bold;">Georgiy</span></td>
+<td style="font-weight: bold;">Dorin</td>
+</tr>
+<tr>
+<td>Tâche 1. Diagramme de classe</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 2. Diagramme de séquence ou de collaboration</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 3. Diagramme de paquets</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 4. Contraintes OCL</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 5. Identification des modules réutilisables</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 6. Discussion de couplage et de la cohésion des
+modules</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 7. Discussion du fardeau des classes</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 8. Graphe IA et justification</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 9. Justification de l'application des principes
+de
+conception</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Tâche 10. Implémentation désign en Java</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>&nbsp;(50%)</td>
+<td>(50%)</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<h2>Désign logiciel</h2>
+Les <a href="Design">fichiers</a> de diagrammes,
+inclusivement les
+projets en format .vpp.<br>
+<br>
+<h3>Tâche 1. Diagramme de classe</h3>
+<img style="width: 1956px; height: 1651px;" alt="Diagramme de
+classes" src="Design/diagramme_classe.png"><br>
+<h3><br>
+</h3>
+<h3>Tâche 2. Diagramme de séquence ou de collaboration</h3>
+<img style="width: 983px; height: 437px;" alt="Verification trajet
+disponnible" src="Design/diagramme_sequence_verification.png"><br>
+<br>
+<br>
+<br>
+<img style="width: 771px; height: 366px;" alt="Reservation place" src="Design/diagramme_sequence_reservation.png"><br>
+<br>
+<br>
+<br>
+<img style="width: 1041px; height: 439px;" alt="Paiement place" src="Design/diagramme_sequence_paiement.png"><br>
+<br>
+<br>
+<br>
+<img style="width: 1195px; height: 818px;" alt="Changement ou
+annulation place" src="Design/diagramme_sequence_annuler-changer.png"><br>
+<br>
+<h3>Tâche 3. Diagramme de paquets</h3>
+<img style="width: 1303px; height: 1066px;" alt="Diagramme de
+paquets" src="Design/diagramme_paquets.png">
+<h3>Tâche 4. Contraintes OCL</h3>
+1. Le port de départ et d'arrivée doit être le même:<br>
+<font size="+1"><br>
+</font>
+<pre><font size="+1"><b>context</b> Croisiere</font></pre>
+<pre><font size="+1">&nbsp;&nbsp; <b>inv:</b> self.detail.depart.uiniqueId = self.detail.arrivee.uniqueId</font></pre>
+<br>
+2. Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils
+ne se chevauchent pas:<br>
+(Contrainte temporelle)<br>
+<br>
+<pre><font size="+1"><b>context</b> Croisiere</font></pre>
+<pre><font size="+1">&nbsp;&nbsp; <b>inv:</b> Croisiere.allInstances() -&gt; forAll(t1, t2: Croisiere </font></pre>
+<pre><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | t1 &lt;&gt; t2 AND t1.transport.id = t2.transport.id implies (t1.dateDepart &gt; t2.dateArrivee OR t2.dateDepart &gt; t1.DateArrive))</font></pre>
+<br>
+<h3>Tâche 5. Identification des modules réutilisables</h3>
+<table style="text-align: left; width: 510px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="font-weight: bold; width: 238px;">Module</td>
+<td style="font-weight: bold; width: 254px;">Réutilisation</td>
+</tr>
+<tr>
+<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
+Administration</td>
+<td style="width: 254px;"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Administrateur</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">SystemeAdmin</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
+Voyage</td>
+<td style="width: 254px;"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">LogInfoTrajet</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">Compagnie</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieAerienne</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieCroisiere</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieTrain</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">DetailTrajet</td>
+<td style="width: 254px;">Faible
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Trajet</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Vol</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">Croisiere</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">LigneTrain</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">Station</td>
+<td style="width: 254px;">Moyenne
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Aeroport</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Port</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Gare</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Sujet</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">PlaceParTrajet</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+&nbsp;Client</span></td>
+<td style="width: 254px;"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SystemeClient</td>
+<td style="width: 254px;">Faible</td>
+</tr>
+<tr>
+<td style="width: 238px;">Client</td>
+<td style="width: 254px;">Moyenne
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Reservation</span></td>
+<td style="width: 254px;"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Reservation</td>
+<td style="width: 254px;">Moyenne
 
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Observer</td>
+<td style="width: 254px;">Élevée
 
-      Main Sequence</i>.<br>
-    Effectivement, dans notre système, les classes sont plus ou moins
-    situées près de la diagonale. <br>
-    <br>
-    <h3>Tâche 9. Justification de l'application des principes de
-      conception</h3>
-    <h4>Loi de Demeter</h4>
-    <br>
-    La principe est respecté. En effet, tel qu'il est démontré dans les
-    digrammes de séquence, les classes n’accèdent que aux méthodes de
-    classes dont elles reçoivent en tant que les paramètres ou leurs
-    propres attributs.<br>
-    <br>
-    <h4>Principes SOLID&nbsp; </h4>
-    <h4> Single Responsibility Principle</h4>
-    <br>
-    Nous avons appliqué le <i>Single Responsibility Principle </i>pour
-    déléguer la fonctionnalité de calculer le prix d'une place&nbsp; de
-    la classe <i>Place </i>vers la classe<i> </i><i>Section.<br>
-    </i>Alors, un changement de section ne demande pas de changer la
-    classe <i>Place</i> <br>
-    <br>
-    <h4>Open/Close Principle</h4>
-    <br>
-    Nous avons utilisé ce principe pour enrichir le comportement des
-    classes Vol, Avion, Aeroport. À cette fin, nous avons introduit les
-    classes abstraites Trajet, Transport, Station auxquelles les classes
-    clients vont se référer<br>
-    Ainsi, on n'est pas besoin de modifier les classes SystemeAdmin et
-    SystemeClient si on rajoute une nouvelle réalisation du Transport,
-    un Autobus par exemple.&nbsp; <br>
-    &nbsp;<br>
-    <br>
-    <h4>Liskov Substitutability Principle</h4>
-    <br>
-    En utilisant ce principe, nous avons assuré utilisation de
-    sous-classes de la classe Trajet: Vol, Croisière, LigneTrain dans
-    tout le contexte ou on peut utiliser la classe Trajet.<br>
-    Le même principe a été applique lors de la création de sous-classes
-    des classes Transport, Station, Compagnie, Section etc.<br>
-    En effet, tous les attributs et les méthodes de la classe parent
-    Transport sont applicable à toutes ses sous-classes.<br>
-    <br>
-    <h4>Interface Segregation Principle</h4>
-    <br>
-    La fonctionnalité de la classe <i>PlaceParTrajet</i> a été séparé
-    en deux interfaces: ce qui a rapport au processus de réservation a
-    été isolé dans l'interface <i>Reservable,</i><br>
-    alors que la fonctionnalité de notifier un observateur a été mis
-    dans la classe abstraite <i>Sujet.</i> Dans ce cas-là, la classe <i>SystèmeClient</i>
-    opère seulement sur la partie de la classe décrit dans l'interface <i>Reservable</i>
-    et n'a pas d'accès aux autres méthodes de la classe <i>PlaceParTrajet.</i>&nbsp;
-    <br>
-    &nbsp;<br>
-    Le même principe<i> </i>a été utilisé pour la classe <i>Reservation</i>
-    et l'interface <i>PayableService</i> qu'il réalise. La classe <i>TransactionPaiement</i>
-    ne voit que les méthode lui exposé par l'interface <i>PayableService</i>
-    et ne peut modifier la <i>Reservation.<br>
-      <br>
-    </i>
-    <h4>Dependency Inversion Principle</h4>
-    <br>
-    <br>
-    Dans notre design du système de réservation généralisé,&nbsp; nous
-    avons essayé d'éviter de référer aux réalisation concrètes là où
-    c'était possible. En effet, les classes <i>SystemeAdmin</i> et <i>SystemeClient</i>
-    dépendent de plusieurs classes abstraites <i>Trajet,</i> <i>Station,
-      Reservable, PayableService </i>etc. plutôt que de leurs
-    réalisations concrètes. Alors, le système est devenu assez flexible
-    et les changements dans les classes concrètes ne provoquent des
-    chaînes des changements dans tout le système.<br>
-    <br>
-    <h4>Composite Reuse Principle</h4>
-    <br>
-    Nous avons utilisé ce principe dans le design de la classe <i>PlaceParTrajet.</i>
-    Au lieu d'utiliser l'héritage de la classe <i>Place,</i> cette
-    dernière est incluse dans la classe <i>PlaceParTrajet</i> par la
-    composition avec la délégation d'une partie des fonctions.<br>
-    <br>
-    &nbsp; <br>
-    <i><br>
-    </i>
-    <h3>Tâche 10. Implémentation du design en Java</h3>
-    Les <a href="Code">fichiers Java</a> générés par <i>Visual
-      Paradigm</i> à partir de la diagramme de classe.<br>
-    <br>
-  </body>
-</html>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Transport</span></td>
+<td style="width: 254px;"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Place</td>
+<td style="width: 254px;">Moyenne
+
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Siege</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Cabine</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Transport</td>
+<td style="width: 254px;">Moyenne
+
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Avion</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Train</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Paquebot</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Section</td>
+<td style="width: 254px;">Moyenne
+
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionSieges</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionA, ..., SectionP</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionCabines</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionI, ...,
+&nbsp;SectionFD</td>
+<td style="width: 254px;">Moyenne</td>
+</tr>
+<tr>
+<td style="width: 238px;">Disposition</td>
+<td style="width: 254px;">Moyenne
+
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Etroite, ..., Confort</td>
+<td style="width: 254px;">Moyenne
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Paiement</span></td>
+<td style="width: 254px;"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Paiement</td>
+<td style="width: 254px;">Moyenne
+
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">CarteCredit</td>
+<td style="width: 254px;">Moyenne
+
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Annulation</td>
+<td style="width: 254px;">Moyenne
+
+</td>
+</tr><tr><td>TransactionPaiment</td><td>Moyenne</td></tr>
+</tbody>
+</table>
+<span style="font-weight: bold;"><br>
+</span>
+<h3>Tâche 6. Discussion de couplage et de la cohésion des modules</h3>
+<h4>Couplage</h4>
+Lors de la conception du système nous avons essayé de suivre le
+principe d'une faible couplage et une forte cohésion.<br>
+Effectivement, un seul type de couplage de modules du système est le
+couplage par données.<br>
+De plus, afin de diminuer le nombre des références entre les
+paquets, nous avons introduit des interfaces <b>"Reservable"</b>
+et
+<b>"PayableService"</b>.<br>
+Cette mésure nous a permis d'augmenter la réutilisabilité de paquets
+<b>"Paiement"</b> et <b>"Reservation"</b>.<b><br>
+<br>
+</b>
+<h4><b> Cohésion</b></h4>
+<br>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2" height="1467" width="926">
+<tbody>
+<tr>
+<td style="font-weight: bold; width: 238px;">Module</td>
+<td style="font-weight: bold; width: 254px;">Cohésion</td>
+<td valign="top"><b>Explication</b><br>
+</td>
+</tr>
+<tr>
+<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
+Administration</td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Administrateur</td>
+<td style="width: 254px;">domaine mixte<br>
+</td>
+<td valign="top">La classe Administrateur se réfère
+à la
+classe d'une autre domaine: LogInfoVoyage qui lui est
+extrinsèque<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SystemeAdmin</td>
+<td style="width: 254px;">domaine mixte<br>
+</td>
+<td valign="top">La classe se réfère à plusieurs
+classes
+extrinsèques des autres domaines <br>
+</td>
+</tr>
+<tr>
+<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
+Voyage</td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">LogInfoTrajet</td>
+<td style="width: 254px;">cohésion forte<br>
+</td>
+<td valign="top">Toutes les classes référentes sont
+intrinsèques et font partie du même domaine.<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Compagnie</td>
+<td style="width: 254px;">cohésion forte<br>
+</td>
+<td valign="top">Les classes intrinsèques Trajet et
+DetailTrajet appartiennent au même domaine. Les différent
+types de compagnie sont séparés dans différentes classes:
+CompagnieAérienne etc. <br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieAerienne</td>
+<td style="width: 254px;">cohésion forte<br>
+</td>
+<td valign="top">Est une sous-classe de Compagnie<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieCroisiere</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Est une sous-classe de Compagnie</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieTrain</td>
+<td style="width: 254px;">cohésion forte</td>
+<td valign="top">Est une sous-classe de Compagnie</td>
+</tr>
+<tr>
+<td style="width: 238px;">DetailTrajet</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Toutes les classes dont la classe
+DetailTrajet fait référence sont lui intrinsèques et sont
+dans le même domaine<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Trajet</td>
+<td style="width: 254px;">cohésion forte</td>
+<td valign="top">Toutes les classes dont la classe
+Trajet fait
+référence sont lui intrinsèques. </td>
+</tr>
+<tr>
+<td style="width: 238px;">Vol</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Sous-classe de trajet </td>
+</tr>
+<tr>
+<td style="width: 238px;">Croisiere</td>
+<td style="width: 254px;">cohésion forte</td>
+<td valign="top">Sous-classe de trajet </td>
+</tr>
+<tr>
+<td style="width: 238px;">LigneTrain</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Sous-classe de trajet </td>
+</tr>
+<tr>
+<td style="width: 238px;">Station</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Pas de cohésion de domaine mixte ni
+cohésion
+de rôle mixte, car se réfère aux classes intrinséques
+seulement.<br>
+Pas de cohésion d'instance mixte, car on utilise les
+sous-classes pour représenter différents types de station.<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Aeroport</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Sous-classe de Station<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Port</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Sous-classe de Station<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Gare</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Sous-classe de Station<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Sujet</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Sous-classe de Station<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">PlaceParTrajet</td>
+<td style="width: 254px;">cohésion forte<br>
+</td>
+<td valign="top">Se réfère aux classes de domaines
+différents,
+par conter elles sont toutes lui intrinsèques. Alors, pas de
+cohésion de domaine mixte ni de cohésion de rôle mixte.<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+&nbsp;Client</span></td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SystemeClient</td>
+<td style="width: 254px;">domaine mixte<br>
+</td>
+<td valign="top">Se réfère à plusieurs classes
+extrinsèques du
+même domaine. Pas de cohésion d'instance mixte, car la
+classe est un singleton.<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Client</td>
+<td style="width: 254px;">cohésion forte<br>
+</td>
+<td valign="top">Toutes les classes référées sont
+lui
+intrinsèques. (On considère la classe <i>Réservation</i>
+étant essentielle pour la classe Client car nous sommes dans
+le contexte d'un système de réservation de voyages)<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Reservation</span></td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Reservation</td>
+<td style="width: 254px;">cohésion forte<br>
+</td>
+<td valign="top">La classe Réservation se réfère à
+une classe
+intrinsèque dans le même domaine (Client) et aux autres
+classes des domaines différents. Mais elles sont toutes lui
+intrinsèques. &nbsp; <br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Observer</td>
+<td style="width: 254px;">cohésion forte <br>
+</td>
+<td valign="top">Classe abstrait, pas de références <br>
+</td>
+</tr>
+<tr>
+<td valign="top">Etat<br>
+</td>
+<td valign="top">cohésion forte<br>
+</td>
+<td valign="top">Énumération, pas de références<br>
+</td>
+</tr>
+<tr>
+<td valign="top">Reservable<br>
+</td>
+<td valign="top">cohésion forte </td>
+<td valign="top">Interface, pas de références<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Transport</span></td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Place</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Ne se réfère qu'aux classes
+intrinsèques. Pas
+de cohésion d'instance mixte non plus grâce aux sous-typage
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Siege</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Cabine</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Transport</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Ne se réfère qu'aux classes
+intrinsèques. Pas
+de cohésion d'instance mixte non plus grâce aux sous-typage
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Avion</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Train</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Paquebot</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Section</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Ne se réfère qu'aux classes
+intrinsèques. Pas
+de cohésion d'instance mixte non plus grâce aux sous-typage
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionSieges</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Ne se réfère qu'aux classes
+intrinsèques. Pas
+de cohésion d'instance mixte non plus grâce aux sous-typage
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionA, ..., SectionP</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionCabines</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Ne se réfère qu'aux classes
+intrinsèques. Pas
+de cohésion d'instance mixte non plus grâce aux sous-typage
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionI, ...,
+&nbsp;SectionFD</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Disposition</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top">Ne se réfère qu'aux classes
+intrinsèques. Pas
+de cohésion d'instance mixte non plus grâce aux sous-typage
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Etroite, ..., Confort</td>
+<td style="width: 254px;">cohésion forte </td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Paiement</span></td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Paiement</td>
+<td style="width: 254px;">cohésion forte<br>
+</td>
+<td valign="top">Aucun référence externe grâce à
+l'interface
+PayableService. Toutes les classes référentes sont lui
+intrinsèques<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">CarteCredit</td>
+<td style="width: 254px;">cohésion forte<br>
+</td>
+<td valign="top">Se réfère seulement aux classes
+intrinsèques.<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Annulation</td>
+<td style="width: 254px;">cohésion forte</td>
+<td valign="top">Se réfère seulement aux classes
+intrinsèques.
+</td>
+</tr>
+<tr>
+<td valign="top">TransactionPaiment<br>
+</td>
+<td valign="top">cohésion forte </td>
+<td valign="top">Se réfère seulement aux classes
+intrinsèques.
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+On constate alors que la plupart de classes ont une cohésion forte
+et seulement quelques classes ont une cohésion de domaine mixte.<br>
+Ces sont les classes de domaine d'application du système, soit les
+classes controlleurs, dont la nature prevoit interaction avec
+plusieurs autres<br>
+classes. Alor, tel design est considéré acceptable. <br>
+<br>
+<h3><br>
+</h3>
+<h3>Tâche 7. Discussion du fardeau des classes</h3>
+<table style="text-align: left; width: 510px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="font-weight: bold; width: 238px;">Module</td>
+<td style="font-weight: bold; width: 254px;">Fardeau</td>
+<td valign="top"><b>Domaine</b><br>
+</td>
+</tr>
+<tr>
+<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
+Administration</td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Administrateur</td>
+<td style="width: 254px;">19<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SystemeAdmin</td>
+<td style="width: 254px;">19<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="font-style: italic; font-weight: bold; width: 238px;">Paquet
+Voyage</td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">LogInfoTrajet</td>
+<td style="width: 254px;">18<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Compagnie</td>
+<td style="width: 254px;">18<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieAerienne</td>
+<td style="width: 254px;">18<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieCroisiere</td>
+<td style="width: 254px;">18<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">CompagnieTrain</td>
+<td style="width: 254px;">18<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">DetailTrajet</td>
+<td style="width: 254px;">17<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Trajet</td>
+<td style="width: 254px;">17</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Vol</td>
+<td style="width: 254px;">18<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Croisiere</td>
+<td style="width: 254px;">18</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">LigneTrain</td>
+<td style="width: 254px;">18<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Station</td>
+<td style="width: 254px;">1<br>
+</td>
+<td valign="top">Métier</td>
+</tr>
+<tr>
+<td style="width: 238px;">Aeroport</td>
+<td style="width: 254px;">2<br>
+</td>
+<td valign="top">Métier</td>
+</tr>
+<tr>
+<td style="width: 238px;">Port</td>
+<td style="width: 254px;">2<br>
+</td>
+<td valign="top">Métier</td>
+</tr>
+<tr>
+<td style="width: 238px;">Gare</td>
+<td style="width: 254px;">2<br>
+</td>
+<td valign="top">Métier</td>
+</tr>
+<tr>
+<td style="width: 238px;">Sujet</td>
+<td style="width: 254px;">1<br>
+</td>
+<td valign="top">Métier</td>
+</tr>
+<tr>
+<td style="width: 238px;">PlaceParTrajet</td>
+<td style="width: 254px;">9</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+&nbsp;Client</span></td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SystemeClient</td>
+<td style="width: 254px;">9<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Client</td>
+<td style="width: 254px;">8<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Reservation</span></td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Reservation</td>
+<td style="width: 254px;">7<br>
+</td>
+<td valign="top">Application<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Observer</td>
+<td style="width: 254px;">1<br>
+</td>
+<td valign="top">Architecture<br>
+</td>
+</tr>
+<tr>
+<td valign="top">Etat<br>
+</td>
+<td valign="top">1<br>
+</td>
+<td valign="top">Métier</td>
+</tr>
+<tr>
+<td valign="top">Reservable<br>
+</td>
+<td valign="top">3<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Transport</span></td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Place</td>
+<td style="width: 254px;">2<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Siege</td>
+<td style="width: 254px;">3<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Cabine</td>
+<td style="width: 254px;">3<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Transport</td>
+<td style="width: 254px;">4<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Avion</td>
+<td style="width: 254px;">5<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Train</td>
+<td style="width: 254px;">5<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Paquebot</td>
+<td style="width: 254px;">5<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Section</td>
+<td style="width: 254px;">3<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionSieges</td>
+<td style="width: 254px;">5<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionA, ..., SectionP</td>
+<td style="width: 254px;">6<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionCabines</td>
+<td style="width: 254px;">4<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">SectionI, ...,
+&nbsp;SectionFD</td>
+<td style="width: 254px;">5<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Disposition</td>
+<td style="width: 254px;">2<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Etroite, ..., Confort</td>
+<td style="width: 254px;">3<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;"><span style="font-style: italic; font-weight: bold;">Paquet
+Paiement</span></td>
+<td style="width: 254px;"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Paiement</td>
+<td style="width: 254px;">6<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">CarteCredit</td>
+<td style="width: 254px;">2</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td style="width: 238px;">Annulation</td>
+<td style="width: 254px;">6</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+<tr>
+<td valign="top">TransactionPaiment<br>
+</td>
+<td valign="top">5<br>
+</td>
+<td valign="top">Métier<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+On observe alors un fardeau plus élevé pour les classes du domaine
+d'application que pour celles du domaine de métier.<br>
+Ce comportement vient en accord avec le principe de design stipulant
+qu'une classe du domaine plus "bas" doit avoir un fardeau plus
+faible, qu'une classe du domaine d'application.<br>
+<br>
+<h3>Tâche 8. Graphe IA et justification</h3>
+<p><i><b>Abstraction :</b><br>
+</i></p>
+<p><i>A = Na / Nc</i><i><br>
+</i></p>
+<p><i>Na = # classes abstraites </i><i><br>
+</i><i>Nc = # classes total</i><br>
+</p>
+<p><i><b>Instabilité :</b><br>
+</i></p>
+<p><i>I = Ce / (Ca + Ce)</i><i><br>
+</i></p>
+<p><i>Ce = # de dépendances sortantes </i><i><br>
+</i><i>Ca = # de dépendances entrantes</i><br>
+</p>
+<table border="1" cellpadding="2" cellspacing="2" height="85" width="895">
+<tbody>
+<tr>
+<td valign="top"><b>Paquet</b><br>
+</td>
+<td valign="top"><b>Na</b><br>
+</td>
+<td valign="top"><b>Nc</b><br>
+</td>
+<td valign="top"><b>Ca</b><br>
+</td>
+<td valign="top"><b>Ce</b><br>
+</td>
+<td valign="top"><b>Abstraction</b><br>
+</td>
+<td valign="top"><b>Instabilité</b><br>
+</td>
+</tr>
+<tr>
+<td valign="top">Administration<br>
+</td>
+<td valign="top">0<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">0<br>
+</td>
+<td valign="top">3<br>
+</td>
+<td valign="top">0<br>
+</td>
+<td valign="top">1<br>
+</td>
+</tr>
+<tr>
+<td valign="top">Voyage<br>
+</td>
+<td valign="top">4<br>
+</td>
+<td valign="top">16<br>
+</td>
+<td valign="top">4<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">4/16=0.25<br>
+</td>
+<td valign="top">2/6=0.33<br>
+</td>
+</tr>
+<tr>
+<td valign="top">Client<br>
+</td>
+<td valign="top">0<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">1<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">0/2=0<br>
+</td>
+<td valign="top">2/3=0.67<br>
+</td>
+</tr>
+<tr>
+<td valign="top">Reservation<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">4<br>
+</td>
+<td valign="top">1<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">2/4=0.5<br>
+</td>
+<td valign="top">2/3=0.67<br>
+</td>
+</tr>
+<tr>
+<td valign="top">Transport<br>
+</td>
+<td valign="top">6<br>
+</td>
+<td valign="top">24<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">0<br>
+</td>
+<td valign="top">6/24=0.25<br>
+</td>
+<td valign="top">2/2=1<br>
+</td>
+</tr>
+<tr>
+<td valign="top">Paiement<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">5<br>
+</td>
+<td valign="top">2<br>
+</td>
+<td valign="top">0<br>
+</td>
+<td valign="top">2/5=0.4<br>
+</td>
+<td valign="top">0<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br><br><br>
+<img src="Design/graphe_ia.png" alt="graph ratio abstraction vs
+instability" height="637" width="692"><br>
+<br>
+<br>Selon le <i>Stable Abstraction Principle</i>, les paquets
+ne
+doivent être très éloignés de la diagonale descendante appelée <i>The
+Main Sequence</i>. Le paquet le plus éloigné est le paquet <span style="font-style: italic;">Paiement,</span>
+mais il ne dépasse pas l'écart-type et on le considère acceptable. Le
+meilleur representant est le paquet Administrateur qui tombe exactement
+sur la diagonale. Dans notre système, tous les paquets sont en général
+situés plus ou moins près de la diagonale. Ce résultat confirme le fait
+qu'on a une bonne architecture.<br><br>
+<h3>Tâche 9. Justification de l'application des principes de
+conception</h3>
+<h4>Loi de Demeter</h4>
+
+Le principe est respecté. En effet, tel qu'il est démontré dans les
+digrammes de séquence, les classes n’'accèdent qu'aux méthodes de
+classes dont elles reçoivent en tant que paramètres ou leurs
+propres attributs.<br>
+<br>
+<h4>Principes SOLID&nbsp; </h4>
+<h4> Single Responsibility Principle</h4>
+
+Nous avons appliqué le <i>Single Responsibility Principle </i>pour
+déléguer la fonctionnalité de calculer le prix d'un place de
+la classe <i>Place </i>vers la classe<i> </i><i>Section.<br>
+</i>Alors, un changement de section ne demande pas de changer la
+classe <i>Place</i> <br>
+<br>
+<h4>Open/Close Principle</h4>
+
+Nous avons utilisé ce principe pour enrichir le comportement des
+classes Vol, Avion, Aeroport. À cette fin, nous avons introduit les
+classes abstraites Trajet, Transport, Station auxquelles les classes
+clients vont se référer.<br>
+Ainsi, on n'a pas besoin de modifier les classes SystemeAdmin et
+SystemeClient si on rajoute une nouvelle réalisation du Transport,
+un Autobus par exemple.&nbsp; <br>
+&nbsp;<br>
+<br>
+<h4>Liskov Substitutability Principle</h4>
+En utilisant ce principe, nous avons assuré l'utilisation de
+sous-classes de la classe Trajet: Vol, Croisière, LigneTrain dans
+tout le contexte ou on peut utiliser la classe Trajet.<br>
+Le même principe a été appliqué lors de la création de sous-classes
+des classes Transport, Station, Compagnie, Section etc.<br>
+En effet, tous les attributs et les méthodes de la classe parent
+Transport sont applicables à toutes ses sous-classes.<br>
+<br>
+<h4>Interface Segregation Principle</h4>
+
+La fonctionnalité de la classe <i>PlaceParTrajet</i> a été
+séparée
+en deux interfaces: ce qui a rapport au processus de réservation a
+été isolé dans l'interface <i>Reservable,</i><br>
+alors que la fonctionnalité de notifier un observateur a été mise
+dans la classe abstraite <i>Sujet.</i> Dans ce cas-là, la
+classe <i>SystèmeClient</i>
+opère seulement sur la partie de la classe décrite dans l'interface <i>Reservable</i>
+et n'a pas d'accès aux autres méthodes de la classe <i>PlaceParTrajet.</i>&nbsp;
+<br>
+Le même principe<i> </i>a été utilisé pour la classe <i>Reservation</i>
+et l'interface <i>PayableService</i> qu'il réalise. La
+classe <i>TransactionPaiement</i>
+ne voit que les méthodes lui exposées par l'interface <i>PayableService</i>
+et ne peut modifier la <i>Reservation.<br>
+<br>
+</i>
+<h4>Dependency Inversion Principle</h4>
+Dans notre design,&nbsp;nous
+avons essayé d'éviter de référer aux réalisation concrètes là où
+c'était possible. En effet, les classes <i>SystemeAdmin</i>
+et <i>SystemeClient</i>
+dépendent de plusieurs classes abstraites <i>Trajet,</i> <i>Station,
+Reservable, PayableService </i>etc. plutôt que de leurs
+réalisations concrètes. Alors, le système est devenu assez flexible
+et les changements dans les classes concrètes ne provoquent des
+chaînes des changements dans tout le système.<br>
+<br>
+<h4>Composite Reuse Principle</h4>
+Nous avons utilisé ce principe dans le design de la classe <i>PlaceParTrajet.</i>
+Au lieu d'utiliser l'héritage de la classe <i>Place,</i>
+cette
+dernière est incluse dans la classe <i>PlaceParTrajet</i>
+par la
+composition avec la délégation d'une partie des fonctions.<br>
+&nbsp; <br>
+<i><br>
+</i>
+<h3>Tâche 10. Implémentation du design en Java</h3>
+Les <a href="Code">fichiers Java</a> générés par <i>Visual
+Paradigm</i> à partir du diagramme de classe.<br>
+<br>
+</body></html>
